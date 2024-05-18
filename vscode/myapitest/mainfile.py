@@ -31,18 +31,18 @@ import vscode.myapitest.model as model
 
 import vscode.myapitest.database as database
 import vscode.myapitest.schemas as schemas
-from schemas import createuser,pokemonlogin,returnuser,poo
+from vscode.myapitest.schemas import createuser,pokemonlogin,returnuser,poo
 import vscode.myapitest.oauthfile as oauthfile
-from oauthfile import checktoken
-from database import engine
+from vscode.myapitest.oauthfile import checktoken
+from vscode.myapitest.database import engine
 model.Base.metadata.create_all(bind=engine)
-from oauthfile import *
+from vscode.myapitest.oauthfile import *
 import vscode.myapitest.schemas as schemas
-from schemas import *
-from database import *
+from vscode.myapitest.schemas import *
+from vscode.myapitest.database import *
 from sqlalchemy.orm import sessionmaker,Session
 
-from database import get_db
+from vscode.myapitest.database import get_db
 from fastapi import FastAPI,HTTPException,APIRouter
 from pydantic import BaseModel
 from typing import Optional
@@ -80,7 +80,7 @@ from sqlalchemy import DateTime, Integer, String
 from sqlalchemy.orm import session
 from jose import JWTError, jwt  
 from fastapi.security import oauth2,OAuth2PasswordBearer,OAuth2PasswordRequestForm
-from oauthfile import checktoken,check_token,create_token
+from vscode.myapitest.oauthfile import checktoken,check_token,create_token
 from vote import router
 
 from jose import JWTError, jwt
