@@ -11,14 +11,18 @@ from typing import Any
 from typing import Union
 from fastapi import FastAPI,HTTPException,APIRouter,Depends
 from passlib.context import CryptContext
-import schemas,database,model,oauthfile
+import vscode.myapitest.schemas as schemas
+import vscode.myapitest.database as database
+import vscode.myapitest.model as model
+import vscode.myapitest.oauthfile as oauthfile
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 from pydantic_settings import BaseSettings
-from config import setting,settings,BaseSettings
-import schemas
-from mainfile import Session
-from database import get_db
-from oauthfile import check_token
+from vscode.myapitest.config import setting,settings,BaseSettings
+import vscode.myapitest.schemas as schemas
+from vscode.myapitest.mainfile import Session
+from vscode.myapitest.database import get_db
+from vscode.myapitest.oauthfile import check_token
 
 router=APIRouter(prefix='/vote')
 

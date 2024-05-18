@@ -2,7 +2,8 @@ from jose import JWTError, jwt
 from datetime import datetime,timedelta
 from fastapi import Depends,status,HTTPException
 from fastapi.security import oauth2,OAuth2PasswordBearer,OAuth2PasswordRequestForm
-from config import setting,settings,BaseSettings
+
+from vscode.myapitest.config import setting,settings,BaseSettings
 oauth2_scheme=OAuth2PasswordBearer(tokenUrl='login')
 SECRET_KEY = setting.secret_key
 ALGORITHM = setting.algorithm
@@ -11,7 +12,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES = setting.ACCESS_TOKEN_EXPIRE_MINUTES
 from pydantic import BaseModel,Field
 from typing import Optional
 
-from database import *
+from vscode.myapitest.database import *
 
 
 
