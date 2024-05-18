@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 from pydantic_settings import BaseSettings
-from myapitest.config import setting,settings,BaseSettings
+from vscode.myapitest.config import setting,settings,BaseSettings
 from sqlalchemy import func
 
 
