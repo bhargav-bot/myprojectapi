@@ -28,19 +28,19 @@ from psycopg2.extras import RealDictCursor
 import time
 from jose import JWTError,jwt
 from datetime import datetime,UTC,timedelta
-import model
-from model import *
-import database as database
-from schemas import createuser,pokemonlogin,returnuser,poo
-from oauthfile import checktoken
-from database import engine
-model.Base.metadata.create_all(bind=engine)
-from oauthfile import *
-from schemas import *
-from database import *
+import vscode.myapitest.model
+from vscode.myapitest.model import *
+import vscode.myapitest.database as database
+from vscode.myapitest.schemas import createuser,pokemonlogin,returnuser,poo
+from vscode.myapitest.oauthfile import checktoken
+from vscode.myapitest.database import engine
+vscode.myapitest.model.Base.metadata.create_all(bind=engine)
+from vscode.myapitest.oauthfile import *
+from vscode.myapitest.schemas import *
+from vscode.myapitest.database import *
 from sqlalchemy.orm import sessionmaker,Session
-import schemas
-from database import get_db
+import vscode.myapitest.schemas
+from vscode.myapitest.database import get_db
 from fastapi import FastAPI,HTTPException,APIRouter
 from pydantic import BaseModel
 from typing import Optional
@@ -78,7 +78,7 @@ from sqlalchemy import DateTime, Integer, String
 from sqlalchemy.orm import session
 from jose import JWTError, jwt  
 from fastapi.security import oauth2,OAuth2PasswordBearer,OAuth2PasswordRequestForm
-from oauthfile import checktoken,check_token,create_token
+from vscode.myapitest.oauthfile import checktoken,check_token,create_token
 from vote import router
 
 from jose import JWTError, jwt
