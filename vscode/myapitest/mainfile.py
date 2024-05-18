@@ -37,10 +37,11 @@ from oauthfile import checktoken
 from database import engine
 model.Base.metadata.create_all(bind=engine)
 from oauthfile import *
+import vscode.myapitest.schemas as schemas
 from schemas import *
 from database import *
 from sqlalchemy.orm import sessionmaker,Session
-import schemas
+
 from database import get_db
 from fastapi import FastAPI,HTTPException,APIRouter
 from pydantic import BaseModel
