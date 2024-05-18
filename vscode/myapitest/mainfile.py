@@ -28,7 +28,7 @@ import time
 from jose import JWTError,jwt
 from datetime import datetime,UTC,timedelta
 import vscode.myapitest.model as model
-from model import *
+
 import vscode.myapitest.database as database
 import vscode.myapitest.schemas as schemas
 from schemas import createuser,pokemonlogin,returnuser,poo
