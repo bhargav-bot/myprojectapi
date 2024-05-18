@@ -1,1 +1,1 @@
-web.uvicorn myapitest.main:dog --host=0.0.0.0 --port=8000 --reload
+web: uvicorn myapitest.mainfile:dog --host=0.0.0.0 --port=${PORT:-5000}
