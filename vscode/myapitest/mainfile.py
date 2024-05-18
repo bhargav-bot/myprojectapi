@@ -114,7 +114,7 @@ while True:
         print("database connection successful")
         break
     except Exception as error:
-        print("database connection failed")
+        print("database connection failed123erghehgir")
         print(error)
         time.sleep(2)
         print("retrying")
