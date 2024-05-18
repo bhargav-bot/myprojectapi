@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from sqlalchemy.sql.expression import null, true
 from sqlalchemy.sql.sqltypes import Boolean
-from database import Base
+from vscode.myapitest.database import Base
 from sqlalchemy import DateTime, Integer, String
 
 
