@@ -6,10 +6,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 from pydantic_settings import BaseSettings
 from vscode.myapitest.config import setting,settings,BaseSettings
 from sqlalchemy import func
-import sys
-import os
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from jose import JWTError, jwt
 from pydantic import BaseModel
