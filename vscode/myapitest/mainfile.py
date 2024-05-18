@@ -27,10 +27,12 @@ from psycopg2.extras import RealDictCursor
 import time
 from jose import JWTError,jwt
 from datetime import datetime,UTC,timedelta
-import model
+import vscode.myapitest.model as model
 from model import *
-import database as database
+import vscode.myapitest.database as database
+import vscode.myapitest.schemas as schemas
 from schemas import createuser,pokemonlogin,returnuser,poo
+import vscode.myapitest.oauthfile as oauthfile
 from oauthfile import checktoken
 from database import engine
 model.Base.metadata.create_all(bind=engine)
