@@ -113,7 +113,7 @@ while True:
         conn=psycopg2.connect(host='localhost',database='mydatabase',user='postgres',password='Bhargav@1908',cursor_factory=RealDictCursor)   
         cursor=conn.cursor()
        
-        print("database connection successful")
+        print("database connection successfulb")
         break
     except Exception as error:
         print("database connection failed123erghehgifr")
