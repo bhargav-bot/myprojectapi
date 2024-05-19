@@ -9,7 +9,7 @@ from vscode.myapitest.config import setting,settings,BaseSettings
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option('sqlalchemy.url',f'postgres://{setting.database_username}:{setting.database_password}@{setting.database_hostname}:{setting.database_port}/{setting.database_name}')
+config.set_main_option('sqlalchemy.url',f'postgresql://{setting.database_username}:{setting.database_password}@{setting.database_hostname}:{setting.database_port}/{setting.database_name}')
 
 
 
