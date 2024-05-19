@@ -75,7 +75,7 @@ from sqlalchemy import func as sql_func
 
 from sqlalchemy.sql.expression import null, true
 from sqlalchemy.sql.sqltypes import Boolean
-from database import Base
+from vscode.myapitest.database import Base
 from sqlalchemy import DateTime, Integer, String
 from sqlalchemy.orm import session
 from jose import JWTError, jwt  
