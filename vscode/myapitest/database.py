@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from jose import JWTError, jwt
 import vscode.myapitest.config as config
 from vscode.myapitest.config import setting
-SQLALCHEMY_DATABASE_URL=f'postgresql://u32hacvapjkcg0:p214666510362171577c54a7484498cd7f073b5191dcdd181ca8f0de5dc33197e@c97r84s7psuajm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d4iao105dgf212'
+SQLALCHEMY_DATABASE_URL=f'postgresql://{setting.database_username}:{setting.database_password}@{setting.database_hostname}:{setting.database_port}/{setting.database_name}'
 
 
 
