@@ -1,11 +1,11 @@
 from pydantic_settings import BaseSettings
 
 class settings(BaseSettings):
-    database_hostname:str='localhost'
-    database_password:str='Bhargav%401908'
+    database_hostname:str='c97r84s7psuajm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com'
+    database_password:str='p214666510362171577c54a7484498cd7f073b5191dcdd181ca8f0de5dc33197e'
     database_port:str='5432'
-    database_name:str='mydatabase'
-    database_username:str='postgres'
+    database_name:str='d4iao105dgf212'
+    database_username:str='u32hacvapjkcg0'
     secret_key:str='09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7'
     algorithm:str='HS256'
     ACCESS_TOKEN_EXPIRE_MINUTES:int=60
