@@ -289,7 +289,7 @@ def ffun(id:int,db:Session=Depends(get_db),d:int=Depends(check_token)):
         #print(e)
         db.commit()
     else:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,detail="user does12 not have access")
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,detail="user does12 noedgt have access")
     return e
 
     
