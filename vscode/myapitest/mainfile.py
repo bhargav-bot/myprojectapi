@@ -81,7 +81,7 @@ from sqlalchemy.orm import session
 from jose import JWTError, jwt  
 from fastapi.security import oauth2,OAuth2PasswordBearer,OAuth2PasswordRequestForm
 from vscode.myapitest.oauthfile import checktoken,check_token,create_token
-from vote import router
+from vscode.myapitest.vote import router
 
 from jose import JWTError, jwt
 from datetime import datetime,timedelta
