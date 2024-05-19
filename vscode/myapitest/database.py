@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from jose import JWTError, jwt
 import vscode.myapitest.config as config
 from vscode.myapitest.config import setting
-SQLALCHEMY_DATABASE_URL=f'{setting.DATABASE_URL}'
+SQLALCHEMY_DATABASE_URL=f'{setting.MY_DATABASE_URL}'
 
 
 
