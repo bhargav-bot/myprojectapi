@@ -107,7 +107,7 @@ dog.add_middleware(
 
 
 
-
+'''
 while True:
     try:
         conn=psycopg2.connect(host=setting.database_hostname,database=setting.database_name,user=setting.database_username,password=setting.database_password,cursor_factory=RealDictCursor)   
@@ -121,6 +121,7 @@ while True:
         time.sleep(2)
         print("retrying")
         continue
+'''
 dog.post('/ppp/')
 def fff():
     return 'ppp'
@@ -208,12 +209,14 @@ def f2(db: Session = Depends(get_db)):
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    '''
 @dog.get('/getpost12345')
 def fff2():
     cursor.execute("""SELECT public.posts.name AS posts_name, public.posts.id AS posts_id, public.posts.user_id AS posts_user_id, count(votes.post_id) AS count_1 
 FROM public.posts LEFT OUTER JOIN public.votes ON public.posts.id = public.votes.post_id GROUP BY public.posts.id""")
     d=cursor.fetchall()
     return d
+    '''
     
 @dog.get('/getpost12345')
 def f2(db:Session=Depends(get_db)): 
