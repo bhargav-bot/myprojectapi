@@ -110,7 +110,7 @@ dog.add_middleware(
 
 while True:
     try:
-        conn=psycopg2.connect(host='localhost',database='mydatabase',user='postgres',password='Bhargav@1908',cursor_factory=RealDictCursor)   
+        conn=psycopg2.connect(host=setting.database_hostname,database=setting.database_name,user=setting.database_username,password=setting.database_password,cursor_factory=RealDictCursor)   
         cursor=conn.cursor()
        
         print("database connection successful")
