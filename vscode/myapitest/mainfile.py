@@ -124,7 +124,7 @@ while True:
 '''
 dog.post('/ppp/')
 def fff():
-    return 'ppp'
+    return 'pppp'
 
 
 dog.get('/a')
