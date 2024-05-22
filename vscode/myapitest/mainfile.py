@@ -127,7 +127,7 @@ def fff():
     return 'pppp'
 
 
-dog.get('/a')
+dog.get('/')
 def fffff():
     return 'pppp'
 dog.include_router(router)
