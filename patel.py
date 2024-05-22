@@ -41,7 +41,7 @@ def post(new_var:postf):#this is called pydantic this is used to control what va
 
     print(type(new_var))
     print("published value:"+str(new_var.published))
-    print("rating value:"+str(new_var.rating))
+    print("rating dvalue:"+str(new_var.rating))
 
     
     return "hi"
