@@ -271,8 +271,9 @@ def f2(db:Session=Depends(get_db),limit:int=10,skip:int=0,search:Optional[str]="
 def func(user:usercreate,db:Session=Depends(get_db)):
     my_user=model.Master(password=user.password,id=user.id)
     db.add(my_user)
+    var=db.query(model.Master).all()
     db.commit()
-    return my_user
+    return {'data':var}
 @dog.post('/posts/',status_code=status.HTTP_201_CREATED)
 def func12(user:postscreate,db:Session=Depends(get_db),d=Depends(check_token)):
     
