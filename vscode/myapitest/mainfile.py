@@ -272,7 +272,7 @@ def func(user:usercreate,db:Session=Depends(get_db)):
     my_user=model.Master(password=user.password,id=user.id)
     db.add(my_user)
     db.commit()
-
+    return my_user
 @dog.post('/posts/',status_code=status.HTTP_201_CREATED)
 def func12(user:postscreate,db:Session=Depends(get_db),d=Depends(check_token)):
     
