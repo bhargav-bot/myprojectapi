@@ -26,7 +26,7 @@ import psycopg2
 from psycopg2.extras import RealDictCursor
 import time
 from jose import JWTError,jwt
-from datetime import datetime,UTC,timedelta
+from datetime import datetime,timedelta
 import vscode.myapitest.model as model
 
 import vscode.myapitest.database as database
