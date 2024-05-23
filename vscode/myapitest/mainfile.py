@@ -163,11 +163,11 @@ def userlogin(var:OAuth2PasswordRequestForm=Depends(),db:Session=Depends(get_db)
     return {'token':token,"token_type":"bearer"}
 
 
-@dog.get('/getpost',response_model=list[postsreturn])
+@dog.get('/getpost',response_model=List[postsreturn])
 def ff(db:Session=Depends(get_db),d=Depends(check_token)):
     v=db.query(model.Slave).filter(model.Master.id==int(d)).all()
     return v
-@dog.get('/getuser',response_model=list[userreturn])
+@dog.get('/getuser',response_model=List[userreturn])
 def f2(db:Session=Depends(get_db),d=Depends(check_token)):
     v=db.query(model.Master).all()
     
@@ -261,7 +261,7 @@ def f2(db: Session = Depends(get_db)):
         return jsonable_encoder(response)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
-@dog.get('/getuser/query',response_model=list[userreturn])
+@dog.get('/getuser/query',response_model=List[userreturn])
 def f2(db:Session=Depends(get_db),limit:int=10,skip:int=0,search:Optional[str]=" "):
     v=db.query(model.Master).filter(model.Master.password.contains(search)).limit(limit).offset(skip).all()
     
