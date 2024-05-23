@@ -133,7 +133,7 @@ def fffff():
 
 dog.include_router(router)
 
-@dog.get('/patel/',response_model=list[returnuser])
+@dog.get('/patel/',response_model=List[returnuser])
 def fum2(var:createuser,db:Session=Depends(get_db),varvar=Depends(check_token)):
     d=db.query(model.poke).all()
     return d
