@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+            @font-face {
+                font-family: god;
+                src: url("thegod.ttf");
+            }
+            #myname{
+                 
+                color: brown;
+                font-size: 100pt;
+                font-weight: 1000;
+                font-style: italic;
+                font-family: god;
+                z-index: 1;
+
+            }
+            #my{
+                height: 400px;
+                width: 200px;
+                z-index: 1;
+            }
+            #who{
+                height: 400px;
+                width: 300px;
+                z-index: 1;
+            }
+            .background-video{
+                position: fixed;
+                z-index: -1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            } 
+            div{
+                width: 200px;
+                height: 100px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>my name is <span id="myname">Bhargav</span></p>
+        <img id="my"src="https://i.pinimg.com/736x/9f/a3/60/9fa360c5a928043d90aeb2400fc6ce18.jpg" >
+        <video class="background-video" src="f1.mp4" autoplay muted loop></video>
+        <div>
+            <img src="myimage.jpeg">
+        </div>
+    </body>
+</html>

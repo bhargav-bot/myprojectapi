@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Function to check if the specific external display is connected
+is_specific_display_connected() {
+  system_profiler SPDisplaysDataType | grep -q "DELL S2721QS"
+  return $?
+}
+
+# Main loop to monitor the specific external display connection
+while true; do
+  if is_specific_display_connected; then  awake."
+
+    # Prevent system sleep and keep display awake
+    sudo pmset -a disablesleep 1
+
+
+    # Monitor the specific external display connection
+    while is_specific_display_connected; do
+      # Check and reset system sleep prevention periodically
+      sudo pmset -a disablesleep 1
+      sleep 10  # Adjust interval as needed
+    done
+
+    # If the specific external display is disconnected, reset pmset and kill the caffeinate process
+    echo "Specific external display is disconnected. Resetting sleep settings."
+    sudo pmset -a disablesleep 0
+    kill $CAFFEINATE_PID
+
+  else
+    echo "Specific external display is not connected. System will sleep."
+    sudo pmset sleepnow  # Command to put the system to sleep immediately
+    break  # Exit the loop once the system is put to sleep
+  fi
+done

@@ -1,0 +1,15 @@
+[Unit]
+Description=Uvicorn instance to serve FastAPI app
+After=network.target
+
+[Service]
+User=Yesha # Replace with the username you use to log in via SSH
+Group=Yesha    # Replace with the primary group of your username
+WorkingDirectory=/home/Yesha/myfastapitest  # Replace with the path to your FastAPI application directory
+ExecStart=/path/to/your/venv/bin/uvicorn mainfilejemacode:bhargav --host 0.0.0.0 --port 8008 --workers 4
+Environment="PYTHONPATH=/home/Yesha/myfastapitest"  # Optional: Set PYTHONPATH if needed
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

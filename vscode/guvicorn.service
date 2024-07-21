@@ -1,0 +1,14 @@
+[Unit]
+Description=My Fastapi application
+After=network.target
+
+[Service]
+User=bhargav
+Group=bhargav
+WorkingDirectory=/home/bhargav/app/fastapi
+Environment="PATH=/home/bhargav/app/fastapi/venv/bin"
+ExecStart=gunicorn -w 4 -k uvicorn.workers.UvicornWorker -vscode.myapitest.mainfile:dog --bind 0.0.0.0:8000
+EnvironmentFile=/home/bhargav/.env
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
